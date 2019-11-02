@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './product.component';
 import { Products } from './products';
 import { HeartComponent } from './heart.component';
+import { GenderComponent } from './gender.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
-    HeartComponent
+    HeartComponent,
+    GenderComponent
   ],
   imports: [
     BrowserModule
