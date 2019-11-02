@@ -20,7 +20,12 @@ import {Component} from '@angular/core';
             <img src="{{gender.imgUrl}}">
             <h3>{{gender.name}}</h3>
         </div>
-
+        
+        <i class="fa fa-heart fa-3x"
+        [style.color]="ilike ? 'red' : '' "
+        (click) = "Action()"
+        [class.fa-heart-o]="!ilike"
+        ></i>
   
     </div>
 
