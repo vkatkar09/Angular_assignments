@@ -7,6 +7,8 @@ import { Products } from './products';
 import { HeartComponent } from './heart.component';
 import { GenderComponent } from './gender.component';
 import { HeartLikeComponent } from './heartLike.component';
+import { StoreUserComponent } from './storeUsers.component';
+import { CurrentUserComponent } from './currentuser.component';
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { HeartLikeComponent } from './heartLike.component';
     HeartComponent,
     GenderComponent,
     HeartLikeComponent,
-  
+    StoreUserComponent,
+    CurrentUserComponent
   ],
   imports: [
     BrowserModule
