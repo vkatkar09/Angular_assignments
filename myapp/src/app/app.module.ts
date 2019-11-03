@@ -9,6 +9,7 @@ import { GenderComponent } from './gender.component';
 import { HeartLikeComponent } from './heartLike.component';
 import { StoreUserComponent } from './storeUsers.component';
 import { CurrentUserComponent } from './currentuser.component';
+import { TaskComponent } from './task.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { CurrentUserComponent } from './currentuser.component';
     GenderComponent,
     HeartLikeComponent,
     StoreUserComponent,
-    CurrentUserComponent
+    CurrentUserComponent,
+    TaskComponent
   ],
   imports: [
     BrowserModule
