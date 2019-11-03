@@ -6,13 +6,17 @@ import { ProductComponent } from './product.component';
 import { Products } from './products';
 import { HeartComponent } from './heart.component';
 import { GenderComponent } from './gender.component';
+import { HeartLikeComponent } from './heartLike.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductComponent,
     HeartComponent,
-    GenderComponent
+    GenderComponent,
+    HeartLikeComponent,
+  
   ],
   imports: [
     BrowserModule
