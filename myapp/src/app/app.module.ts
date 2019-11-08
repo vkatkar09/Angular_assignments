@@ -10,6 +10,7 @@ import { HeartLikeComponent } from './heartLike.component';
 import { StoreUserComponent } from './storeUsers.component';
 import { CurrentUserComponent } from './currentuser.component';
 import { TaskComponent } from './task.component';
+import { ProductNewComponent } from './productNew.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { TaskComponent } from './task.component';
     HeartLikeComponent,
     StoreUserComponent,
     CurrentUserComponent,
-    TaskComponent
+    TaskComponent,
+    ProductNewComponent
   ],
   imports: [
     BrowserModule

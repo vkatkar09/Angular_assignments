@@ -1,0 +1,108 @@
+<style>
+    #header {
+        background-color: rgb(139, 175, 187);
+        width: 100%;
+        height: 50px;
+        text-align: center;
+    }
+
+    #sidebar-left {
+        float: left;
+        width: 15%;
+        background-color: rgb(217, 230, 217);
+    }
+
+    #main {
+        float: left;
+        width: 70%;
+        background-color: white;
+    }
+
+    #sidebar-right {
+        float: left;
+        width: 15%;
+        background-color: rgb(217, 230, 217);
+    }
+
+    #footer {
+        clear: both;
+        height: 50px;
+        width: 100%;
+        text-align: center;
+        background-color: rgb(139, 175, 187);
+    }
+
+    #sidebar-left,
+    #main,
+    #sidebar-right {
+        min-height: 600px
+    }
+</style>
+
+<div id="header">Header</div>
+
+<div id="sidebar-left">
+    <br>
+    <button type="button" class="btn btn-primary btn-md"(click)="contentArea='laptop'">Laptop</button><br><br>
+    <button type="button" class="btn btn-info btn-md" (click)="contentArea='mobile'">Mobile</button><br><br>
+    <button type="button" class="btn btn-info btn-md" (click)="contentArea='ac'">AC</button><br><br>
+    <button type="button" class="btn btn-info btn-md" (click)="contentArea='tv'">TV</button><br><br>
+</div>
+
+<div id="main">
+    <div *ngIf="contentArea" [ngSwitch]="contentArea">
+        <div *ngSwitchCase="'laptop'">
+            <h2>This is laptop section</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6 " *ngFor="let laptop of laptopDetails">
+                        <img src="{{laptop.imgUrl}}" style="width:200px; height:200px" />
+                        <p>Name: {{laptop.name}}</p>
+                        <p>Price: {{laptop.price}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngSwitchCase="'mobile'">
+            <h2>This is Mobile section </h2>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 " *ngFor="let mobile of mobileDetails">
+                            <img src="{{mobile.imgUrl}}" style="width:200px; height:200px" />
+                            <p>Name: {{mobile.name}}</p>
+                            <p>Price: {{mobile.price}}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div *ngSwitchCase="'ac'">
+            <h2>This is AC section </h2>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 " *ngFor="let ac of acDetails">
+                            <img src="{{ac.imgUrl}}" style="width:200px; height:200px" />
+                            <p>Name: {{ac.name}}</p>
+                            <p>Price: {{ac.price}}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div *ngSwitchCase="'tv'">
+            <h2>This is TV section </h2>
+            <div class="container">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 " *ngFor="let tv of tvDetails">
+                            <img src="{{tv.imgUrl}}" style="width:200px; height:200px" />
+                            <p>Name: {{tv.name}}</p>
+                            <p>Price: {{tv.price}}</p>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <h3 *ngSwitchDefault>Not Found</h3>
+    </div>
+</div>
+
+<div id="sidebar-right">Right</div>
+
+<div id="footer">Footer</div>
