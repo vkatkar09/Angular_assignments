@@ -11,6 +11,8 @@ import { StoreUserComponent } from './storeUsers.component';
 import { CurrentUserComponent } from './currentuser.component';
 import { TaskComponent } from './task.component';
 import { ProductNewComponent } from './productNew.component';
+import { ImgHttp } from './imgHttp.component';
+import { ImgPipes } from './img.pipes';
 
 
 @NgModule({
@@ -23,7 +25,9 @@ import { ProductNewComponent } from './productNew.component';
     StoreUserComponent,
     CurrentUserComponent,
     TaskComponent,
-    ProductNewComponent
+    ProductNewComponent,
+    ImgHttp,
+    ImgPipes
   ],
   imports: [
     BrowserModule
